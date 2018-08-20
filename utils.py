@@ -32,24 +32,3 @@ def plot_alignment(alignment, epoch, eng_name, kor_name):
     plt.title('{} epochs \n {} \n {}'.format(epoch, txt_eng_name, txt_kor_name))
     plt.savefig('{}/alignment_{}k.png'.format(hp.logdir + '/' + hp.modelname, epoch), format='png')
     plt.close()
-
-
-def make_oversampling():
-    files = [f for f in os.listdir('./datas/nations') if not f.startswith('.')]
-    for f in files:
-        lines = codecs.open('./datas/nations/' + f, 'r', 'utf-8').read().splitlines()
-        with codecs.open('./datas/50_oversampled_nations/' + f, 'w', 'utf-8') as fout:
-            if len(lines) < 50:
-                flag = True
-                oversampled_lines = []
-                while flag:
-                    for line in lines:
-                        oversampled_lines.append(line)
-                        if len(oversampled_lines) == 50:
-                            flag = False
-                            break
-                for line in oversampled_lines:
-                    fout.write(line + '\n')
-            else:
-                for line in lines:
-                    fout.write(line + '\n')
