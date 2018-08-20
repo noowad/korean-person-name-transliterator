@@ -3,7 +3,10 @@
 In this project, I implemented a system to translate (transliterate) Roman alphabet person-names into Hangul person-names.
 For examples,
 - michael -> 마이클
-- peter -> 피터
+- peter -> 피터  
+
+You can check the result files in `./results` directory.  
+(Roman person-name \t hangul person-name \t top-5 candidates)
 ## Requirements
 - Python 2.7
 - Tensorflow >=1.8.0
