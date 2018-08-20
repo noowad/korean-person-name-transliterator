@@ -3,6 +3,9 @@ import tensorflow as tf
 from tensorflow.contrib.rnn import RNNCell
 from module import prenet
 
+'''
+From https://github.com/keithito/tacotron/blob/master/models/rnn_wrappers.py
+'''
 
 class DecoderPrenetWrapper(RNNCell):
     '''Runs RNN inputs through a prenet before sending them to the cell.'''
