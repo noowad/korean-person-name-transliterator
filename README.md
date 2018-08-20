@@ -35,7 +35,7 @@ omitting highway network, because the length of an input sequence is much shorte
 - The project did not consider country adaptation. But generally, person-names have different pronunciations depending on the country. Therefore, you need to implement country adaptation for precise uses. 
 - If you have a set of small country-specific datasets, you can implement country adaptation by fine-tuning the pre-training model.
 (For details, see [Country Adaptation in Neural Machine Transliteration of Person Names](https://confit.atlas.jp/guide/event-img/jsai2018/2L4-04/public/pdf?type=in))
-- This project does not follow standard foreign language notation. The project follows the notation which is estimated by neural model trained on training data.
+- This project does not follow "standard foreign language notation of Korean". The project follows the notation which is estimated by neural model trained on training data.
 Therefore, we have no responsibility for the uses of this project.
 ## References
 - https://github.com/Kyubyong/neural_japanese_transliterator
